@@ -1,17 +1,44 @@
 aid: adaptive-biotechnologies
 name: Adaptive Biotechnologies
-description: 'Adaptive Biotechnologies is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Adaptive Biotechnologies Corporation (Nasdaq: ADPT) is a Seattle, Washington immune-medicine
+  company that reads and translates the adaptive immune system at scale. Founded in 2009 by
+  brothers Chad Robins and Harlan Robins as Adaptive TCR Corporation, it built an
+  immunosequencing platform that amplifies and sequences rearranged T-cell and B-cell receptor
+  genes, then applies computational models to turn that receptor repertoire into clinical and
+  research data. Its lead commercial product is clonoSEQ, an FDA-cleared next-generation
+  sequencing assay for measurable residual disease (MRD) in multiple myeloma, B-cell acute
+  lymphoblastic leukemia, chronic lymphocytic leukemia, mantle cell lymphoma and diffuse large
+  B-cell lymphoma, run out of its CLIA-certified, CAP-accredited Seattle laboratory. It also
+  sells immunoSEQ research assays with the cloud-based immunoSEQ Analyzer and the immuneACCESS
+  public data repository, and MRD biopharma services to drug developers. Adaptive is a
+  diagnostics and services company, not a software vendor: it publishes no developer portal, no
+  public API reference and no machine-readable specification. Its integration surface is
+  clinician-facing and delivered bilaterally — clonoSEQ orders and results flow through Epic
+  (including Epic Aura), Flatiron Health's OncoEMR via Molecular Profiling Integration, and
+  Carequality/health information exchanges, arranged through its EMR integration specialists
+  rather than through self-serve documentation.
 url: https://raw.githubusercontent.com/api-evangelist/adaptive-biotechnologies/refs/heads/main/apis.yml
+image: https://www.adaptivebiotech.com/wp-content/uploads/2021/01/adaptive-logo@2x-copy.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pipeline
 specificationVersion: '0.20'
 created: '2026-09-07'
 modified: '2026-09-07'
 tags:
 - Company
+- Biotechnology
+- Life Sciences
+- Genomics
+- Immunology
+- Clinical Diagnostics
+- Oncology
+- Health Care
+- Laboratory
+- Precision Medicine
+- Data
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +46,58 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Conformance
+  url: conformance/adaptive-biotechnologies-conformance.yml
+- type: LLMsTxt
+  url: llms/adaptive-biotechnologies-llms.txt
+- type: DomainSecurity
+  url: security/adaptive-biotechnologies-domain-security.yml
 - type: Website
+  url: https://www.adaptivebiotech.com/
+- type: Support
+  url: https://www.adaptivebiotech.com/contact-us/
+- type: Blog
+  url: https://www.adaptivebiotech.com/blog/
+- type: Login
+  url: https://clients.adaptivebiotech.com/login
+- type: TermsOfService
+  url: https://www.adaptivebiotech.com/terms-of-service/
+- type: PrivacyPolicy
+  url: https://www.adaptivebiotech.com/online-privacy-policy/
+- type: Compliance
+  url: https://www.adaptivebiotech.com/licenses-and-accreditation/
+- type: Careers
+  url: https://www.adaptivebiotech.com/career-listings/
+- type: InvestorRelations
+  url: https://investors.adaptivebiotech.com/
+- type: SecondaryMarket
   url: https://forgeglobal.com/adaptive-biotechnologies_stock/
+x-enrichment:
+  date: '2026-09-07'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v3
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    Adaptive markets a live clonoSEQ integration surface — "40+ direct data connections across
+    200+ healthcare institutions", Epic Aura, Flatiron OncoEMR Molecular Profiling Integration
+    and Carequality result delivery — but the only door is an 8-12 week engagement arranged with
+    integration specialists at emrsupport@adaptivebiotech.com; there is no developer page in the
+    35-URL sitemap, no interface specification, and /openapi.json plus every named /.well-known
+    path 404s on all four Adaptive-controlled hosts.
+  evidence:
+  - url: https://www.clonoseq.com/emr-integration/
+    status: 200
+  - url: https://clients.adaptivebiotech.com/login
+    status: 200
+  - url: https://www.adaptivebiotech.com/openapi.json
+    status: 404
+  - url: https://www.adaptivebiotech.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.adaptivebiotech.com/page-sitemap.xml
+    status: 200
+  - url: https://api.github.com/orgs/AdaptiveBiotech/repos
+    status: 200
+  checked: '2026-09-07'

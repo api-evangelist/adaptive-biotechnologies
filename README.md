@@ -64,5 +64,54 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Adaptive Biotechnologies is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/adaptive-biotechnologies_stock/
+Adaptive Biotechnologies Corporation (Nasdaq: ADPT) is a Seattle, Washington immune-medicine
+company that reads and translates the adaptive immune system at scale. Founded in 2009 by Chad
+Robins and Harlan Robins as Adaptive TCR Corporation, it sequences rearranged T-cell and B-cell
+receptor genes and applies computational models to turn the immune repertoire into clinical and
+research data. Its lead product, **clonoSEQ**, is an FDA-cleared next-generation sequencing assay
+for measurable residual disease (MRD) in multiple myeloma, B-ALL, CLL, mantle cell lymphoma and
+DLBCL, run from its CLIA-certified, CAP-accredited Seattle laboratory. It also sells **immunoSEQ**
+research assays with the cloud-based immunoSEQ Analyzer and the **immuneACCESS** public repertoire
+data repository, and **MRD biopharma services** to drug developers.
+
+## API surface
+
+**Adaptive publishes no public API.** Contract discovery on 2026-09-07 probed `/openapi.json`,
+`/openapi.yaml`, `/swagger.json`, `/api-docs`, `/v1/openapi.json`, `/redoc`, `/docs`, `/llms.txt`,
+`/apis.json`, `/apis.yml` and the full named `/.well-known` set (security.txt, openid-configuration,
+oauth-authorization-server, oauth-protected-resource, api-catalog, ai-plugin.json, ucp.json,
+acp.json, aauth-resource.json, apis.json, agent-card.json, agent.json) across
+`www.adaptivebiotech.com`, `adaptivebiotech.com`, `clients.adaptivebiotech.com`,
+`www.clonoseq.com` and `www.immunoseq.com`. Every path returned 404 on the four honest hosts;
+`www.immunoseq.com` is a catch-all that 301s everything to the corporate site, and a
+negative-control path confirmed it. No GraphQL endpoint, MCP server, A2A agent card, AsyncAPI,
+gRPC or WSDL was found, and neither GitHub organization bearing the company's name publishes a
+single public repository.
+
+The real integration surface is clinician-facing and delivered bilaterally: clonoSEQ orders and
+results flow through Epic (including Epic Aura), Flatiron Health's OncoEMR via Molecular Profiling
+Integration, and Carequality / health information exchanges — arranged through Adaptive's
+integration specialists rather than through self-serve documentation, with an Epic build described
+as an 8-12 week project.
+
+## Artifacts in this profile
+
+| Artifact | What it records |
+|---|---|
+| `conformance/` | Published certifications (ISO 27001, ISO 13485, MDSAP, EU IVDR, CLIA, CAP, state lab licenses, HIPAA) and the interoperability standards Adaptive does not declare |
+| `security/` | Probed TLS, HSTS, DNSSEC, CAA, SPF and DMARC posture |
+| `well-known/` | The `/.well-known` probe across five hosts — a measured absence |
+| `packages/` | No first-party SDK in any registry; the two third-party consumers of the immunoSEQ file format |
+| `plans/` | No published plans or list pricing |
+| `rate-limits/` | No published limits (no API to limit) |
+| `llms/` | A generated llms.txt describing this profile |
+
+## Links
+
+- Website: https://www.adaptivebiotech.com/
+- clonoSEQ: https://www.clonoseq.com/
+- clonoSEQ EMR integration: https://www.clonoseq.com/emr-integration/
+- immunoSEQ Analyzer: https://clients.adaptivebiotech.com/login
+- Licenses and accreditation: https://www.adaptivebiotech.com/licenses-and-accreditation/
+- Blog: https://www.adaptivebiotech.com/blog/
+- Investor relations: https://investors.adaptivebiotech.com/

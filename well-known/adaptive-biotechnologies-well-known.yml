@@ -1,0 +1,290 @@
+# Adaptive Biotechnologies — /.well-known discovery probe
+generated: '2026-09-07'
+method: probed
+source: live probe of the 15 named /.well-known and apis.json paths on every host in apis.yml
+hosts:
+- host: https://www.adaptivebiotech.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  hit_count: 0
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/adaptive-biotechnologies-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 128790
+    verdict: honest-404
+- host: https://adaptivebiotech.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  hit_count: 0
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/adaptive-biotechnologies-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 128790
+    verdict: honest-404
+- host: https://clients.adaptivebiotech.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  hit_count: 0
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/adaptive-biotechnologies-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 1966
+    verdict: honest-404
+- host: https://www.clonoseq.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  hit_count: 0
+  path_echo_control: passed
+  soft_404_control:
+    path: /.well-known/adaptive-biotechnologies-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 70613
+    verdict: honest-404
+- host: https://www.immunoseq.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 200
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+  - path: /.well-known/ucp.json
+    status: 200
+    file: null
+  - path: /.well-known/acp.json
+    status: 200
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    file: null
+  - path: /.well-known/apis.json
+    status: 200
+    file: null
+  - path: /apis.json
+    status: 200
+    file: null
+  - path: /apis.yml
+    status: 200
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+  hit_count: 0
+  path_echo_control: failed
+  soft_404_control:
+    path: /.well-known/adaptive-biotechnologies-negative-control-7f3ab91c.json
+    status: 200
+    bytes: 299474
+    verdict: catch-all-200
+  note: "www.immunoseq.com answers every path with the same 299,474-byte HTML page \u2014 a 301 to https://www.adaptivebiotech.com/our-platform/\
+    \ \u2014 including a control path that cannot exist. Every 200 recorded on this host is a catch-all,\
+    \ not a document."
+summary:
+  hosts_probed: 5
+  paths_per_host: 15
+  documents_found: 0
+  note: "Adaptive Biotechnologies serves no /.well-known discovery surface. Every named path returned\
+    \ an honest 404 on www.adaptivebiotech.com, adaptivebiotech.com, clients.adaptivebiotech.com and www.clonoseq.com;\
+    \ www.immunoseq.com is a catch-all that 301s every path to the corporate site and its 200s are therefore\
+    \ not documents. No WellKnown or SecurityTxt pointer is emitted \u2014 this file records a measured\
+    \ absence, not a served surface. The corporate Okta tenant adaptivebiotech.okta.com does serve RFC\
+    \ 8414/OIDC metadata, but that is Okta-hosted employee SSO on a vendor domain reached only by following\
+    \ the docs.adaptivebiotech.com Google Workspace SAML redirect, not an API discovery surface Adaptive\
+    \ publishes, so it is deliberately not listed above."

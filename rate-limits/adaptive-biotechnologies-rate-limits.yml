@@ -1,0 +1,22 @@
+# Adaptive Biotechnologies — API rate limits
+generated: '2026-09-07'
+method: searched
+source: https://www.adaptivebiotech.com/
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No rate limits are documented because no public API exists to limit. Contract discovery on
+  2026-09-07 returned HTTP 404 for /openapi.json, /openapi.yaml, /swagger.json, /api-docs,
+  /v1/openapi.json, /llms.txt, /apis.json and every named /.well-known path on
+  www.adaptivebiotech.com, adaptivebiotech.com, clients.adaptivebiotech.com and
+  www.clonoseq.com, and POST /graphql on clients.adaptivebiotech.com returns the same
+  "No CSRF token found in headers" 403 as a control path that does not exist, so it is a global
+  filter rather than a GraphQL endpoint. limit_count 0 is a measured result. No RateLimits
+  pointer is emitted in apis.yml, because a pointer would assert a runtime signal that is not
+  published.
+evidence:
+- url: https://www.adaptivebiotech.com/openapi.json
+  status: 404
+- url: https://clients.adaptivebiotech.com/api/v1
+  status: 404

@@ -1,0 +1,21 @@
+# Adaptive Biotechnologies — plans and pricing
+generated: '2026-09-07'
+method: searched
+source: https://www.adaptivebiotech.com/
+plan_count: 0
+plans: []
+note: >-
+  Adaptive Biotechnologies publishes no plans, tiers or list pricing of any kind. It is a
+  clinical laboratory and biopharma services business: clonoSEQ is ordered by a clinician and
+  billed through medical insurance (with an Adaptive Assist financial-support program at
+  https://www.clonoseq.com/adaptive-assist/), immunoSEQ research assays and MRD biopharma
+  services are quoted through business development, and the immunoSEQ Analyzer is bundled with
+  assay purchase. The 35-page sitemap at https://www.adaptivebiotech.com/sitemap_index.xml
+  contains no pricing page, and there is no API to price. plan_count 0 is a measured result,
+  not an unchecked field. No Pricing or Plans pointer is emitted in apis.yml, because a pointer
+  would assert a published pricing surface that does not exist.
+evidence:
+- url: https://www.adaptivebiotech.com/sitemap_index.xml
+  status: 200
+- url: https://www.clonoseq.com/adaptive-assist/
+  status: 200

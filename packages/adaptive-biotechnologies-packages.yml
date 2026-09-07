@@ -1,0 +1,42 @@
+# Adaptive Biotechnologies — client libraries / SDKs
+generated: '2026-09-07'
+method: searched
+source: npm, PyPI, crates.io, GitHub org listing, Bioconductor
+package_count: 0
+packages: []
+note: >-
+  No first-party client library exists in any public registry. Searched npm (registry search for
+  adaptivebiotech / clonoseq / immunoseq — no matching package), PyPI (/pypi/immunoseq/json,
+  /pypi/clonoseq/json, /pypi/adaptivebiotech/json, /pypi/adaptive-biotech/json all HTTP 404) and
+  crates.io. Two GitHub organizations exist and are plausibly Adaptive's — github.com/AdaptiveBiotech
+  (created 2023-02-15) and github.com/adaptive-biotechnologies (created 2019-04-01) — but both
+  report public_repos 0 and carry no name, description, blog or email, so neither is verifiable as
+  Adaptive's and neither publishes code; no GitHubOrganization pointer is emitted. The R package
+  LymphoSeq on Bioconductor parses immunoSEQ export files but is maintained by David Coffey at Fred
+  Hutchinson Cancer Center, and tcrdist3 (kmayerb) likewise reads Adaptive TSV exports — both are
+  third-party consumers of Adaptive's file format, not Adaptive SDKs, and are deliberately not
+  listed as packages. No Packages or SDKs pointer is emitted in apis.yml: package_count 0 is a
+  measured result, and a pointer would assert a client-library surface that does not exist.
+third_party_consumers:
+- name: LymphoSeq
+  language: r
+  registry: bioconductor
+  url: https://bioconductor.org/packages/release/bioc/html/LymphoSeq.html
+  official: false
+  version: null
+  published: null
+  note: >-
+    Maintained by David Coffey (Fred Hutchinson Cancer Center). Analyzes immunoSEQ export files;
+    not published by Adaptive Biotechnologies. Version not recorded because Bioconductor release
+    versions track the Bioconductor release train, not an Adaptive release.
+- name: tcrdist3
+  language: python
+  registry: github
+  url: https://github.com/kmayerb/tcrdist3
+  official: false
+  version: null
+  published: null
+  note: >-
+    Third-party TCR distance library documenting how to read Adaptive immunoSEQ files
+    (https://tcrdist3.readthedocs.io/en/latest/adaptive.html). Not an Adaptive package; version
+    intentionally not recorded because it is not a first-party artifact.

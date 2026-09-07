@@ -1,0 +1,82 @@
+# Adaptive Biotechnologies — standards + compliance conformance
+generated: '2026-09-07'
+method: searched
+source: https://www.adaptivebiotech.com/licenses-and-accreditation/
+note: >-
+  Adaptive Biotechnologies publishes no machine-readable API contract, so nothing here is derived
+  from a specification. Every entry below is read from a page the company publishes. The
+  laboratory and quality-system credentials are real and named on the Licenses & Accreditation
+  page; the healthcare interoperability standards are recorded as NOT declared because Adaptive's
+  own public pages — including the clonoSEQ EMR integration page — name integration partners
+  (Epic, Epic Aura, Flatiron OncoEMR, Carequality) but never name HL7 v2, FHIR, C-CDA or any
+  other interchange standard. That is an honest absence of a public declaration, not evidence
+  that the underlying interfaces do not use those standards.
+standards:
+- id: iso-27001
+  conforms: true
+  evidence: >-
+    "ISO – 27001 Certification" listed and linked on
+    https://www.adaptivebiotech.com/licenses-and-accreditation/
+- id: iso-13485
+  conforms: true
+  evidence: >-
+    "ISO – 13485 Certification" listed and linked on
+    https://www.adaptivebiotech.com/licenses-and-accreditation/
+- id: mdsap
+  conforms: true
+  evidence: >-
+    "MDSAP Certification" (Medical Device Single Audit Program) listed on
+    https://www.adaptivebiotech.com/licenses-and-accreditation/
+- id: eu-ivdr
+  conforms: true
+  evidence: >-
+    "IVDR Certificate" (EU In Vitro Diagnostic Regulation 2017/746) listed on
+    https://www.adaptivebiotech.com/licenses-and-accreditation/
+- id: clia
+  conforms: true
+  evidence: >-
+    "CLIA License" listed on https://www.adaptivebiotech.com/licenses-and-accreditation/;
+    the Seattle laboratory is described as CLIA-certified on
+    https://www.adaptivebiotech.com/contact-us/
+- id: cap-accreditation
+  conforms: true
+  evidence: >-
+    "CAP Accreditation" (College of American Pathologists) listed on
+    https://www.adaptivebiotech.com/licenses-and-accreditation/
+- id: hipaa
+  conforms: true
+  evidence: >-
+    A HIPAA Notice of Privacy Practices is published at
+    https://www.adaptivebiotech.com/hipaa-notice/ and a protected-health-information request
+    process at https://www.adaptivebiotech.com/request-for-protected-health-information/
+- id: state-clinical-laboratory-licensure
+  conforms: true
+  evidence: >-
+    California, Maryland, New York, Pennsylvania and Rhode Island clinical laboratory
+    licenses/permits listed on https://www.adaptivebiotech.com/licenses-and-accreditation/
+- id: hl7-v2
+  conforms: false
+  evidence: >-
+    Not declared. https://www.clonoseq.com/emr-integration/ (HTTP 200) describes lab order and
+    result exchange with Epic and OncoEMR and "40+ direct data connections" but names no HL7
+    message profile; no interface specification is published on any Adaptive host.
+- id: fhir
+  conforms: false
+  evidence: >-
+    Not declared. No FHIR CapabilityStatement, endpoint or mention on any Adaptive-controlled
+    host; /openapi.json, /swagger.json and the whole /.well-known set return 404 on
+    www.adaptivebiotech.com, www.clonoseq.com and clients.adaptivebiotech.com.
+- id: c-cda
+  conforms: false
+  evidence: >-
+    Not declared. Result distribution is described as flowing through Carequality and health
+    information exchanges on https://www.clonoseq.com/emr-integration/, which implies a document
+    standard, but Adaptive names none.
+- id: oauth2
+  conforms: false
+  evidence: >-
+    Not applicable. No public API and no OAuth surface; /.well-known/oauth-authorization-server
+    and /.well-known/openid-configuration return 404 on every Adaptive host probed 2026-09-07.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No published API contract to carry problem+json responses.
