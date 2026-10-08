@@ -58,6 +58,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Plans
+  url: plans/adaptive-biotechnologies-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/adaptive-biotechnologies-rate-limits.yml
 - type: Conformance
   url: conformance/adaptive-biotechnologies-conformance.yml
 - type: LLMsTxt
