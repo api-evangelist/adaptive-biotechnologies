@@ -64,54 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Adaptive Biotechnologies Corporation (Nasdaq: ADPT) is a Seattle, Washington immune-medicine
-company that reads and translates the adaptive immune system at scale. Founded in 2009 by Chad
-Robins and Harlan Robins as Adaptive TCR Corporation, it sequences rearranged T-cell and B-cell
-receptor genes and applies computational models to turn the immune repertoire into clinical and
-research data. Its lead product, **clonoSEQ**, is an FDA-cleared next-generation sequencing assay
-for measurable residual disease (MRD) in multiple myeloma, B-ALL, CLL, mantle cell lymphoma and
-DLBCL, run from its CLIA-certified, CAP-accredited Seattle laboratory. It also sells **immunoSEQ**
-research assays with the cloud-based immunoSEQ Analyzer and the **immuneACCESS** public repertoire
-data repository, and **MRD biopharma services** to drug developers.
+Adaptive Biotechnologies Corporation (Nasdaq: ADPT) is a Seattle, Washington immune-medicine company that reads and translates the adaptive immune system at scale. Founded in 2009 by brothers Chad Robins and Harlan Robins as Adaptive TCR Corporation, it built an immunosequencing platform that amplifies and sequences rearranged T-cell and B-cell receptor genes, then applies computational models to turn that receptor repertoire into clinical and research data. Its lead commercial product is clonoSEQ, an FDA-cleared next-generation sequencing assay for measurable residual disease (MRD) in multiple myeloma, B-cell acute lymphoblastic leukemia, chronic lymphocytic leukemia, mantle cell lymphoma and diffuse large B-cell lymphoma, run out of its CLIA-certified, CAP-accredited Seattle laboratory. It also sells immunoSEQ research assays with the cloud-based immunoSEQ Analyzer and the immuneACCESS public data repository, and MRD biopharma services to drug developers. Adaptive is a diagnostics and services company, not a software vendor: it publishes no developer portal, no public API reference and no machine-readable specification. Its integration surface is clinician-facing and delivered bilaterally — clonoSEQ orders and results flow through Epic (including Epic Aura), Flatiron Health's OncoEMR via Molecular Profiling Integration, and Carequality/health information exchanges, arranged through its EMR integration specialists rather than through self-serve documentation.
 
-## API surface
+**Areas:** Company · Biotechnology · Life Sciences · Genomics · Immunology · Clinical Diagnostics · Oncology · Healthcare · Laboratory · Precision Medicine · Data
 
-**Adaptive publishes no public API.** Contract discovery on 2026-09-07 probed `/openapi.json`,
-`/openapi.yaml`, `/swagger.json`, `/api-docs`, `/v1/openapi.json`, `/redoc`, `/docs`, `/llms.txt`,
-`/apis.json`, `/apis.yml` and the full named `/.well-known` set (security.txt, openid-configuration,
-oauth-authorization-server, oauth-protected-resource, api-catalog, ai-plugin.json, ucp.json,
-acp.json, aauth-resource.json, apis.json, agent-card.json, agent.json) across
-`www.adaptivebiotech.com`, `adaptivebiotech.com`, `clients.adaptivebiotech.com`,
-`www.clonoseq.com` and `www.immunoseq.com`. Every path returned 404 on the four honest hosts;
-`www.immunoseq.com` is a catch-all that 301s everything to the corporate site, and a
-negative-control path confirmed it. No GraphQL endpoint, MCP server, A2A agent card, AsyncAPI,
-gRPC or WSDL was found, and neither GitHub organization bearing the company's name publishes a
-single public repository.
+## Adaptive Biotechnologies on APIs.io
 
-The real integration surface is clinician-facing and delivered bilaterally: clonoSEQ orders and
-results flow through Epic (including Epic Aura), Flatiron Health's OncoEMR via Molecular Profiling
-Integration, and Carequality / health information exchanges — arranged through Adaptive's
-integration specialists rather than through self-serve documentation, with an Epic build described
-as an 8-12 week project.
+Everything profiled for Adaptive Biotechnologies is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/adaptive-biotechnologies/](https://apis.io/providers/adaptive-biotechnologies/)** — or go straight to one of the APIs or properties below.
 
-## Artifacts in this profile
+### Published properties
 
-| Artifact | What it records |
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Adaptive Biotechnologies Domain Security](https://apis.io/security/adaptive-biotechnologies/adaptive-biotechnologies-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Adaptive Biotechnologies Plans Pricing](https://apis.io/plans/adaptive-biotechnologies/adaptive-biotechnologies-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Adaptive Biotechnologies Rate Limits](https://apis.io/rate-limits/adaptive-biotechnologies/adaptive-biotechnologies-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.adaptivebiotech.com/)
+- [Support](https://www.adaptivebiotech.com/contact-us/)
+- [Blog](https://www.adaptivebiotech.com/blog/)
+- [Compliance](https://www.adaptivebiotech.com/licenses-and-accreditation/)
+- [Terms of service](https://www.adaptivebiotech.com/terms-of-service/)
+- [Privacy policy](https://www.adaptivebiotech.com/online-privacy-policy/)
+
+## API Evangelist rating
+
+**Kin Score 16.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| `conformance/` | Published certifications (ISO 27001, ISO 13485, MDSAP, EU IVDR, CLIA, CAP, state lab licenses, HIPAA) and the interoperability standards Adaptive does not declare |
-| `security/` | Probed TLS, HSTS, DNSSEC, CAA, SPF and DMARC posture |
-| `well-known/` | The `/.well-known` probe across five hosts — a measured absence |
-| `packages/` | No first-party SDK in any registry; the two third-party consumers of the immunoSEQ file format |
-| `plans/` | No published plans or list pricing |
-| `rate-limits/` | No published limits (no API to limit) |
-| `llms/` | A generated llms.txt describing this profile |
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 35.5 |
 
-## Links
+**Agent readiness 5.4** — agent-aware
 
-- Website: https://www.adaptivebiotech.com/
-- clonoSEQ: https://www.clonoseq.com/
-- clonoSEQ EMR integration: https://www.clonoseq.com/emr-integration/
-- immunoSEQ Analyzer: https://clients.adaptivebiotech.com/login
-- Licenses and accreditation: https://www.adaptivebiotech.com/licenses-and-accreditation/
-- Blog: https://www.adaptivebiotech.com/blog/
-- Investor relations: https://investors.adaptivebiotech.com/
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.8** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/adaptive-biotechnologies/](https://apis.io/providers/adaptive-biotechnologies/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Adaptive Biotechnologies: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/adaptive-biotechnologies/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
